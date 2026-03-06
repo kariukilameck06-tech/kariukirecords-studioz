@@ -295,7 +295,7 @@ document.getElementById('bookingForm').addEventListener('submit', async function
   };
 
   try{
-    const API_URL = "http://localhost:3000/api/save-booking"; // backend URL
+    const API_URL = "https://kariukirecords-studioz.onrender.com/api/save-booking"; // backend URL
     const res = await fetch(API_URL, {
       method: "POST",
       headers: {"Content-Type":"application/json"},
@@ -323,3 +323,4 @@ document.getElementById('bookingForm').addEventListener('submit', async function
 </body>
 
 </html>
+
