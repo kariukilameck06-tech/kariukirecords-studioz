@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KARIUKI RECORDS STUDIOZ</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- SweetAlert2 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<style>
+  /* MOBILE RESPONSIVE FIXES */
+@media (max-width: 900px) {
+  nav ul { flex-direction: column; align-items: flex-start; gap: 10px; margin-top: 10px; }
+  .service-container { flex-direction: column; }
+  .service-box { width: 100% !important; }
+  .gallery { grid-template-columns: 1fr !important; }
+  .gallery img { width: 100% !important; height: auto; }
+  .hero h2 { font-size: 35px; }
+  .hero p { font-size: 16px; }
+  .hero .btn { padding: 10px 25px; font-size: 14px; }
+  form input, form textarea { width: 100%; }
+  #studio-payment > div { flex-direction: column; }
+}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;font-family:'Montserrat',sans-serif;}
+body{background:#0a0a0a;color:#fff;}
+nav{position:fixed;width:100%;padding:20px 8%;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,0.85);backdrop-filter:blur(8px);z-index:1000;}
+nav h1{font-family:'Playfair Display',serif;color:#d4af37;font-size:24px;}
+nav ul{list-style:none;display:flex;}
+nav ul li{margin-left:25px;}
+nav ul li a{text-decoration:none;color:#fff;transition:0.3s;}
+nav ul li a:hover{color:#d4af37;}
+.hero{position:relative;height:100vh;overflow:hidden;}
+.hero video{position:absolute;width:100%;height:100%;object-fit:cover;top:0;left:0;z-index:-1;}
+.hero-overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.5);display:flex;justify-content:center;align-items:center;text-align:center;padding:20px;}
+.hero h2{font-size:55px;font-family:'Playfair Display',serif;margin-bottom:20px;color:#d4af37;}
+.hero p{font-size:18px;margin-bottom:30px;color:#ccc;}
+.btn{padding:12px 35px;background:#d4af37;color:#000;text-decoration:none;border-radius:30px;font-weight:600;transition:0.3s;}
+.btn:hover{background:#fff;}
+section{padding:80px 8%;text-align:center;}
+h2.section-title{font-family:'Playfair Display',serif;font-size:40px;margin-bottom:50px;color:rgb(245,11,11);}
+.service-container{display:flex;flex-wrap:wrap;justify-content:space-between;}
+.service-box{width:30%;background:#111;padding:25px;border-radius:15px;transition:0.4s;margin-bottom:30px;}
+.service-box:hover{transform:translateY(-10px);box-shadow:0 0 25px rgba(212,175,55,0.4);}
+.service-box img{width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px;}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.gallery img{width:100%;height:250px;object-fit:cover;border-radius:15px;transition:0.4s;}
+.gallery img:hover{transform:scale(1.05);}
+form{max-width:600px;margin:auto;display:flex;flex-direction:column;}
+form input,form textarea{margin-bottom:15px;padding:12px;border:none;border-radius:8px;background:#1c1c1c;color:#fff;}
+form button{padding:12px;border:none;background:#d4af37;font-weight:bold;cursor:pointer;border-radius:8px;}
+form button:hover{background:#fff;}
+footer{background:#000;padding:25px;text-align:center;color:#777;}
+.brand{display:flex;align-items:center;gap:10px;}
+.LOGO{width:60px;height:60px;border-radius:50%;object-fit:cover;}
+.name{font-family:Arial,Helvetica,sans-serif;font-size:30px;color:white;}
+.ME{font-size:100px;}
+.info{font-family:Arial,Helvetica,sans-serif;}
+.price-card[data-selected="true"]{border:2px solid #d4af37;transform:translateY(-6px);}
+</style>
+</head>
+
+<body>
+<nav>
+  <div class="brand">
+    <img class="LOGO" src="WhatsApp Image 2026-02-15 at 11.18.10 PM.jpeg" alt="Logo">
+    <h1 class="name">KARIUKI RECORDS STUDIOZ</h1>
+  </div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Equipment</a></li>
+    <li><a href="#contact">Booking</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="home">
+  <video autoplay muted loop>
+    <source src="https://cdn.coverr.co/videos/coverr-filming-a-video-with-a-camera-1564/1080p.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay">
+    <div>
+      <h3 class="ME">KARIUKI RECORDS STUDIOZ</h3>
+      <h2>WE MAKE IT OSTENTATIOUS</h2>
+      <p>Professional Video Recording • Audio Production • Movie Shooting</p>
+      <a href="#studio-payment" class="btn">Book Your Session</a>
+      <div class="info" style="margin-top:15px;">
+        <p>Contact us through:</p>
+        <p>Phone: +254712109628</p>
+        <p>Email: kariukirecordstudioz@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <h2 class="section-title">Our Services</h2>
+  <div class="service-container">
+    <div class="service-box">
+      <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" alt="">
+      <h3>Video Recording</h3>
+      <p>Professional cinema cameras and lighting equipment.</p>
+    </div>
+    <div class="service-box">
+      <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d" alt="">
+      <h3>Audio Recording</h3>
+      <p>High-end microphones and sound cards for crystal-clear audio.</p>
+    </div>
+    <div class="service-box">
+      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="">
+      <h3>Movie Production</h3>
+      <p>Complete film production from shooting to final editing.</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2 class="section-title">Our Equipment</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32" alt="">
+    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" alt="">
+    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d" alt="">
+    <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2" alt="">
+  </div>
+</section>
+
+<section id="studio-payment" style="background:#070707;color:#fff;padding:60px 8%;">
+  <div style="max-width:900px;margin:auto;">
+    <h2 style="color:#d4af37;font-family:'Playfair Display',serif;">Step 1: Choose Service & Make Payment</h2>
+    <p style="color:#ccc;">Select your preferred service and payment method.</p>
+
+    <div style="display:flex;flex-wrap:wrap;gap:15px;margin:25px 0;">
+      <label class="price-card" data-price="40000">
+        <input type="radio" name="service" value="Audio Recording" hidden>
+        <h3 style="color:#d4af37;">Audio Recording</h3>
+        <p style="color: blue;">KES 40,000 per album</p>
+      </label>
+      <label class="price-card" data-price="100000">
+        <input type="radio" name="service" value="Video Shooting" hidden>
+        <h3 style="color:#d4af37;">Video Shooting</h3>
+        <p style="color: green;">KES 100,000 per album</p>
+      </label>
+      <label class="price-card" data-price="12000">
+        <input type="radio" name="service" value="Audio Track" hidden>
+        <h3 style="color:#d4af37;">Audio Track</h3>
+        <p style="color: violet;">KES 12,000 per track</p>
+      </label>
+    </div>
+
+    <div style="background:#0e0e0e;padding:15px;border-radius:10px;margin-bottom:20px;">
+      <p>Choose Payment Method:</p>
+      <label><input type="radio" name="paymethod" value="Mpesa" checked> M-Pesa</label>
+      <label style="margin-left:15px;"><input type="radio" name="paymethod" value="PayPal"> PayPal</label>
+    </div>
+
+    <div id="paymentInstructions" style="background:#0f0f0f;padding:18px;border-radius:10px;color:#ddd;margin-bottom:20px;"></div>
+
+    <div>
+      <label>Enter Your Phone Number:</label><br>
+      <input type="tel" id="userPhone" placeholder="e.g. 0712345678" style="padding:10px;border-radius:8px;border:none;width:200px;background:#111;color:#fff;">
+    </div>
+
+    <button id="payNowBtn" style="padding:12px 18px;border-radius:10px;border:none;background:#2ff507;color:#000;font-weight:700;cursor:pointer;margin-top:15px;">Pay Now</button>
+
+    <button id="confirmBtn" style="padding:12px 18px;border-radius:10px;border:none;background:#3206f7;color:#fff;font-weight:700;cursor:pointer;margin-top:15px;">Confirm & Unlock Booking</button>
+
+    <p id="unlockMsg" style="margin-top:20px;color:#77ff77;font-weight:bold;display:none;">✅ Payment confirmed! You can now book your session below.</p>
+  </div>
+</section>
+
+<section id="contact" style="opacity:0.4;pointer-events:none;transition:all 0.5s ease;">
+  <h2 class="section-title">Step 2: Book a Session</h2>
+  <form id="bookingForm">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="service" placeholder="Service Booked" id="serviceField" readonly>
+    <textarea name="message" rows="5" placeholder="MPESA or PayPal Transaction Code"></textarea>
+    <button type="submit">Submit Booking</button>
+  </form>
+</section>
+
+<footer>© 2026 KARIUKI RECORDS STUDIOZ   developer LAMECK KARIUKI</footer>
+
+<script>
+// PAYMENT CARD SELECTION LOGIC
+(function(){
+  const cards = document.querySelectorAll('.price-card');
+  const payInputs = document.querySelectorAll('input[name="paymethod"]');
+  const confirmBtn = document.getElementById('confirmBtn');
+  const paymentBox = document.getElementById('paymentInstructions');
+  const bookingSection = document.getElementById('contact');
+  const unlockMsg = document.getElementById('unlockMsg');
+  const serviceField = document.getElementById('serviceField');
+
+  const API_URL = "http://localhost:3000/api/save-booking"; // backend URL
+
+  function selectCard(card){
+    cards.forEach(c => c.dataset.selected = 'false');
+    card.dataset.selected = 'true';
+    serviceField.value = card.querySelector('h3').innerText;
+    buildInstructions();
+  }
+
+  cards.forEach(c => c.addEventListener('click', () => selectCard(c)));
+  selectCard(cards[0]);
+
+  function currentPay() {
+    return [...payInputs].find(i => i.checked).value;
+  }
+
+  function buildInstructions(){
+    const selected = [...cards].find(c => c.dataset.selected==='true');
+    const price = selected.dataset.price;
+    const name = selected.querySelector('h3').innerText;
+    const method = currentPay();
+    let html = `<strong>Service:</strong> ${name}<br><strong>Amount:</strong> KES ${price}<br><br>`;
+    if(method==='Mpesa'){
+      html += `<b>Pay via M-Pesa:</b><br>1. Go to M-Pesa → Lipa na M-Pesa → Send Money.<br>2. Enter Number: <b>0712109628</b><br>3. Enter Amount: <b>KES ${price}</b><br>4. Complete payment and use the code below when booking.`;
+    } else {
+      html += `<b>Pay via PayPal:</b><br>Send to: <b>kobadiah9@gmail.com</b><br>Amount: <b>KES ${price}</b> (or USD equivalent).<br>Include PayPal Transaction ID during booking.`;
+    }
+    paymentBox.innerHTML = html;
+  }
+
+  payInputs.forEach(i => i.addEventListener('change', buildInstructions));
+  buildInstructions();
+
+  confirmBtn.addEventListener('click', () => {
+    unlockMsg.style.display='block';
+    bookingSection.style.opacity='1';
+    bookingSection.style.pointerEvents='auto';
+    bookingSection.scrollIntoView({behavior:'smooth'});
+  });
+
+  // PAY NOW BUTTON
+  document.getElementById('payNowBtn').addEventListener('click', async () => {
+    const selected = [...cards].find(c => c.dataset.selected==='true');
+    const price = selected.dataset.price;
+    const service = selected.querySelector('h3').innerText;
+    const phone = document.getElementById('userPhone').value.trim();
+    const method = currentPay();
+
+    if(!/^(07|01)\d{8}$/.test(phone)){
+      alert('Enter valid Safaricom number (07XXXXXXXX)');
+      return;
+    }
+
+    try{
+      const res = await fetch(API_URL, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+          name: "Kariuki Client",
+          email: "client@studioz.com",
+          phone,
+          service,
+          amount: Number(price),
+          method,
+          status: "Paid",
+          date: new Date().toISOString()
+        })
+      });
+      if(res.ok){
+        alert('Payment processed and booking updated in admin portal!');
+      } else {
+        alert('Failed to update booking.');
+      }
+    }catch(err){
+      console.error(err);
+      alert('Error submitting booking.');
+    }
+  });
+})();
+
+// BOOKING FORM SUBMISSION
+document.getElementById('bookingForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const form = e.target;
+  const service = document.getElementById('serviceField').value;
+  const phone = document.getElementById('userPhone').value.trim();
+  const method = [...document.querySelectorAll('input[name="paymethod"]')].find(i => i.checked).value;
+
+  const bookingData = {
+    name: form.name.value,
+    email: form.email.value,
+    service,
+    message: form.message.value,
+    phone,
+    method,
+    amount: Number([...document.querySelectorAll('.price-card')].find(c => c.dataset.selected==='true').dataset.price),
+    status: "Paid",
+    date: new Date().toISOString()
+  };
+
+  try{
+    const API_URL = "http://localhost:3000/api/save-booking"; // backend URL
+    const res = await fetch(API_URL, {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify(bookingData)
+    });
+
+    if(res.ok){
+      Swal.fire({
+        icon:'success',
+        title:'Booking Submitted!',
+        text:'Thank you! Your booking has been received successfully.',
+        confirmButtonColor:'#d4af37',
+        background:'#111',
+        color:'#fff'
+      }).then(()=>window.location.href="congratulations.html");
+    } else {
+      alert('Failed to submit booking.');
+    }
+  }catch(err){
+    console.error(err);
+    alert('Error submitting booking.');
+  }
+});
+</script>
+</body>
+</html>
